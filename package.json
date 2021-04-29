@@ -1,0 +1,27 @@
+{
+  "name": "@do-it/markdown-loader",
+  "version": "0.0.2",
+  "description": "markdown-loader",
+  "keywords": [
+    "documentation",
+    "generator",
+    "vue",
+    "do-it"
+  ],
+  "homepage": "https://github.com/only-doit/markdown-loade/blob/main",
+  "bugs": {
+    "url": "https://github.com/only-doit/markdown-loader/issues"
+  },
+  "license": "MIT",
+  "author": "Antério Vieira",
+  "main": "index.js",
+  "dependencies": {
+    "@vue/component-compiler-utils": "^3.2.0",
+    "@vuepress/markdown": "1.8.2",
+    "loader-utils": "^1.1.0",
+    "lru-cache": "^5.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
