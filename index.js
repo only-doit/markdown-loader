@@ -25,7 +25,13 @@ module.exports = function (src) {
   const { sourceDir, extractHeaders: extractHeadersPattern = ['h2', 'h3'] } = options
   let { markdown } = options
   if (!markdown) {
-    markdown = md()
+    markdown = md({
+      anchor: {
+        permalink: false,
+        permalinkBefore: false,
+        permalinkSymbol: null
+      }
+    })
   }
 
   // we implement a manual cache here because this loader is chained before
