@@ -26,10 +26,14 @@ module.exports = function (src) {
   let { markdown } = options
   if (!markdown) {
     markdown = md({
+      anchor: {
+        permalink: false,
+        permalinkBefore: false,
+        permalinkSymbol: null
+      },
       beforeInstantiate (config) {
-        md.removePlugin(config, 'toc')
-        md.removePlugin(config, 'anchor')
-        md.removePlugin(config, 'convert-router-link')
+        config.plugins.delete('toc')
+        config.plugins.delete('convert-router-link')
       }
     })
   }
